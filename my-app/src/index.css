@@ -26,10 +26,38 @@ ol, ul {
   line-height: 34px;
   height: 34px;
   margin-right: -1px;
-  margin-top: -1px;
+  margin-top: 50px;
   padding: 0;
   text-align: center;
   width: 34px;
+}
+.bigsquare {
+  background:  rgb(112, 57, 25);
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 400px;
+  height: 400px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 400px;
+}
+.whiteboard {
+  background: rgb(255, 255, 255);
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 10px;
+  height: 10px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 325px;
 }
 
 .square:focus {

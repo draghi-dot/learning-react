@@ -5,44 +5,44 @@ import './index.css';
 class Square extends React.Component {
   render() {
     return (
-      <button className="square">
+      <object className="bigsquare" style={{backgroundColor: this.props.color}}>
+      <object className="square" style={{backgroundColor: this.props.color}}></object>
+      <object className="whiteboard" style={{backgroundColor: this.props.color}}></object>
         {/* TODO */}
-      </button>
+      </object>
+      
     );
   }
 }
 
 class Board extends React.Component {
   renderSquare(i) {
-    return <Square />;
+    return (
+      <div>
+          <Square value={2}/>
+      </div>
+    );
   }
-
   render() {
-    const status = 'Next player: X';
+    const status = 'Planul Clasei';
+
 
     return (
       <div>
-        <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
+        <div className = "status">{status}</div>
+        <div className = "bigsquare">
+          {this.renderSquare()}
+          <div className = "square">
+          {this.renderSquare()}
+          </div>
+          <div className = "whiteboard">
+          {this.renderSquare()}
+          </div>
         </div>
       </div>
     );
   }
 }
-
 class Game extends React.Component {
   render() {
     return (
