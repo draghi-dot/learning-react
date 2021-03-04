@@ -1,48 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
 class Square extends React.Component {
   render() {
     return (
-      <object className="bigsquare" style={{backgroundColor: this.props.color}}>
-      <object className="square" style={{backgroundColor: this.props.color}}></object>
-      <object className="whiteboard" style={{backgroundColor: this.props.color}}></object>
+      <button className="square">
         {/* TODO */}
-      </object>
-      
+      </button>
     );
   }
 }
 
 class Board extends React.Component {
   renderSquare(i) {
-    return (
-      <div>
-          <Square value={2}/>
-      </div>
-    );
+    return <Square />;
   }
-  render() {
-    const status = 'Planul Clasei';
 
+  render() {
+    const status = 'Next player: X';
 
     return (
       <div>
-        <div className = "status">{status}</div>
-        <div className = "bigsquare">
-          {this.renderSquare()}
-          <div className = "square">
-          {this.renderSquare()}
-          </div>
-          <div className = "whiteboard">
-          {this.renderSquare()}
-          </div>
+        <div className="status">{status}</div>
+        <div className="board-row">
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
         </div>
       </div>
     );
   }
 }
+
 class Game extends React.Component {
   render() {
     return (
